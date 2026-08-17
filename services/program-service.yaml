@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+
+  mongodb:
+    host: localhost
+    port: 13500
+    database: eca
+    username: root
+    password: sachi
+    authentication-database: admin
+
+server:
+  port: 8001
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    hostname: localhost
