@@ -25,15 +25,19 @@ servlet:
     max-request-size: 10MB
 
 server:
-  port: 8000
+  port: 0
   forward-headers-strategy: framework
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 
 app:
   storage:
     path: ${user.home}/.ijse/eca/students
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
-    hostname: localhost
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#    ip-address: 127.0.0.1
+#    hostname: localhost

@@ -12,10 +12,8 @@ spring:
     authentication-database: admin
 
 server:
-  port: 8001
+  port: 0
 
 eureka:
   instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
-    hostname: localhost
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
