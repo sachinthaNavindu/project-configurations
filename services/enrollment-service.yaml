@@ -4,7 +4,7 @@ spring:
       enabled: true
 
   datasource:
-    url: jdbc:mysql://localhost:3306/db-project?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/db-project?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrival=true
     username: root
     password: sachi
     driver-class-name: com.mysql.cj.jdbc.Driver
