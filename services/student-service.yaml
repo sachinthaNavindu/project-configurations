@@ -31,13 +31,10 @@ server:
 eureka:
   instance:
     instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
 
 app:
   storage:
     path: ${user.home}/.ijse/eca/students
 
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#    ip-address: 127.0.0.1
-#    hostname: localhost
